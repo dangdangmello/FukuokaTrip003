@@ -115,9 +115,31 @@
     }
     </script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel" data-type="module" src="index.tsx"></script>
+    <script type="text/babel" data-presets="react">
+
+const { createRoot } = ReactDOM;
+
+function App() {
+  return (
+    <div style={{ padding: "20px", fontFamily: "Noto Sans TC" }}>
+      <h1 style={{ fontSize: "24px", fontWeight: "bold" }}>
+        🇯🇵 福岡旅遊手札 2026
+      </h1>
+      <p style={{ marginTop: "12px" }}>
+        如果你看到這段文字，代表 GitHub Pages 已成功運行 🎉
+      </p>
+    </div>
+  );
+}
+
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
+
+</script>
+
 </head>
 <body class="text-slate-700">
     <div id="root"></div>
 </body>
+
 </html>

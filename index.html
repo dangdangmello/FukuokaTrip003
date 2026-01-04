@@ -140,6 +140,43 @@ root.render(<App />);
 </head>
 <body class="text-slate-700">
     <div id="root"></div>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const root = document.getElementById("root");
+
+    // 建立標題
+    const h1 = document.createElement("h1");
+    h1.textContent = "🇯🇵 福岡旅遊手札 2026";
+    h1.style.fontSize = "24px";
+    h1.style.fontWeight = "bold";
+    h1.style.padding = "20px";
+    h1.style.fontFamily = "'Noto Sans TC', sans-serif";
+    root.appendChild(h1);
+
+    // 建立說明文字
+    const p = document.createElement("p");
+    p.textContent = "如果你看到這段文字，代表網站已成功運行 🎉";
+    p.style.marginTop = "12px";
+    p.style.padding = "20px";
+    p.style.fontFamily = "'Noto Sans TC', sans-serif";
+    root.appendChild(p);
+
+    // 這裡可以初始化 Leaflet 地圖（保留你原本地圖程式碼）
+    const mapDiv = document.createElement("div");
+    mapDiv.id = "map";
+    mapDiv.style.height = "400px";
+    mapDiv.style.margin = "20px";
+    root.appendChild(mapDiv);
+
+    // Leaflet 地圖範例
+    const map = L.map("map").setView([33.5902, 130.4017], 13);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+});
+</script>
+
 </body>
 
 </html>
+

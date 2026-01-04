@@ -1,0 +1,18 @@
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+function App() {
+  return (
+    <div style={{ padding: "20px", fontFamily: "Noto Sans TC" }}>
+      <h1 style={{ fontSize: "24px", fontWeight: "bold" }}>
+        🇯🇵 福岡旅遊手札 2026
+      </h1>
+      <p style={{ marginTop: "12px" }}>
+        如果你看到這行文字，代表網站已經成功跑起來了 🎉
+      </p>
+    </div>
+  );
+}
+
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
